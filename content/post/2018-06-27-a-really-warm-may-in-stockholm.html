@@ -1,0 +1,26 @@
+---
+title: "A Really Warm May in Stockholm"
+description: "Really really?"
+author: "Matthias Stahl"
+date: "2018-06-27"
+tags: ["apply", "temperatures", "R", "ggplot2", "XML", "RCurl"]
+output:
+  blogdown::html_page:
+    fig_caption: true
+    fig_height: 2
+summary: When I moved to Stockholm in early 2018, it was very cooold. Especially compared to my old hometown Munich. But, when time passed by, we went into a really hot May. Most of my colleagues were sure that this was the hottest May they ever experienced. But is this really true?
+---
+
+
+
+<p>The easiest way is to put this year’s May temperatures in the context of the same month in previous years. These days it’s hard to get weather data without paying fees. However, I found the site <a href="http://tutiempo.net">Tutiempo.net</a>, where they list (historical) temperatures back until 1978.</p>
+<pre class="r"><code>&quot;https://en.tutiempo.net/climate/05-2018/ws-24640.html&quot;</code></pre>
+<p>Cave: I cannot show you the code here, as someone could potentially use it to abuse the website. You can think of one of these <em>gold standard</em> apply examples.</p>
+<p>Nevertheless, with data of the last twenty years at hands, we can plot the different Mays (is there a plural of May?). The thicker line is May 2018. <img src="/post/2018-06-27-a-really-warm-may-in-stockholm_files/figure-html/unnamed-chunk-4-1.png" width="672" /> OK, it seems that my colleagues are right and it really was warmer than in other years. But let’s stay scientific: Matthias, compare 2018 to the median of all years.</p>
+<pre class="r"><code>data_wide &lt;- reshape(data, idvar = &quot;Day&quot;, timevar = &quot;Year&quot;, direction = &quot;wide&quot;)
+data_wide$median &lt;- apply(data_wide[, 2:ncol(data_wide)],
+                   MARGIN = 1,
+                   FUN = median,
+                   na.rm = TRUE)</code></pre>
+<p>I admit, I like R’s <code>apply</code> family of functions! <img src="/post/2018-06-27-a-really-warm-may-in-stockholm_files/figure-html/unnamed-chunk-5-1.png" width="672" /> And it’s true, we had an extraordinarily hot May this year! Extracting information from bulky data is amazing. Well, we could also build the difference of each year to the overall median. For that, I recommend you the <a href="https://github.com/mtstahl/great_summer">github</a> of this little data exploration.</p>
+<p>… and if anyone can explain me the temperature drop in many years around 10th May? Would be great!</p>

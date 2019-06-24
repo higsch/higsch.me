@@ -1,0 +1,56 @@
+baseurl = "https://higsch.me/"
+title = "The Art of Higsch"
+theme = "ghostwriter"
+languageCode = "en-us"
+copyright = "Matthias Stahl"
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+
+[Author]
+    name = "Matthias Stahl"
+    profile = "http://github.com/mtstahl/"
+
+[Taxonomies]
+    tag = "tags"
+
+[Params]
+    intro = true
+    headline = "The Art of Higsch"
+    description = "A million data points."
+    github = "https://github.com/mtstahl/"
+    linkedin = "https://linkedin.com/in/matthias-stahl"
+    twitter = "https://twitter.com/bioschema"
+    email = "matthias.stahl@ki.se"
+    opengraph = false
+    shareTwitter = false
+    shareFacebook = false
+    shareGooglePlus = false
+    shareLinkedIn = false
+    dateFormat = "Mon, Jan 2, 2006"
+    highlightJsUrl = ""
+    highlightJsLocalUrl = ""
+
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "/page/about/"
+    weight = 2

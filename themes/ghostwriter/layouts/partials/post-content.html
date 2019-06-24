@@ -1,0 +1,10 @@
+<div class="post-content clearfix" itemprop="articleBody">
+    {{ with .Params.Image }}
+        <img class="post-featured-image" src="{{ . }}">
+    {{ end }}
+
+    {{ if .Params.summary }}
+        <p>{{ .Params.summary | markdownify }}</p>
+    {{ end }}
+    {{ .Content }}
+</div>
