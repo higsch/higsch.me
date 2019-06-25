@@ -19,7 +19,7 @@ From a colleague I got the logo as SVG and as I have recently come across [Svelt
 I implemented the logo as follows on the webpage (within a Svelte component).
 ```JavaScript
 <script>
-let logoCoordinates = [
+const logoCoordinates = [
   {x1: 9.27, y1: 50.24, x2: 9.27, y2: 33.77},
   {x1: 16.47, y1: 50.24, x2: 16.47, y2: 9.84},
   {x1: 25.93, y1: 50.24, x2: 25.93, y2: 19.36},
