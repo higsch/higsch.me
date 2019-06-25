@@ -149,7 +149,7 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .figure { width: 80%; margin: 0 auto; }
 .figure img { margin: 0; padding: 0; }
 p.caption { margin: 3px 0; padding: 0; font-size: 15px; }
-.post-list { width: 100%; max-width: 889px; margin: 0 auto; list-style: none; padding: 0; }
+.post-list { max-width: 889px; margin: 0 auto; list-style: none; padding: 0; }
 .post-stub { border-bottom: 1px dotted #303030; margin: 0; position: relative; }
 .post-stub:first-child { padding-top: 0; }
 .post-stub a { -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; display: block; color: #424242; padding: 20px 50px; }
